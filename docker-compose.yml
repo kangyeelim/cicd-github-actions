@@ -3,8 +3,6 @@
 services:
   basic-api-dotnet:
     image: basic-api-dotnet:latest
-    depends_on:
-      - database
     build: .
     ports:
       - "5000:5000"
