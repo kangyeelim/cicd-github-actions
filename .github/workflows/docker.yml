@@ -13,8 +13,11 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_ACCESS_TOKEN }}
       - name: Build images
-        run: docker-compose up --exit-code-from basic-api-dotnet
+        run: docker-compose -f "docker-compose.yml" up -d --build
       - name: Tag image
         run: docker tag basic-api-dotnet:latest ${{ secrets.DOCKER_HUB_USERNAME }}/basic-api-dotnet:latest
       - name: Push image
         run: docker push ${{ secrets.DOCKER_HUB_USERNAME }}/basic-api-dotnet:latest
+      - name: Stop containers
+        if: always()
+        run: docker-compose -f "docker-compose.yml" down
