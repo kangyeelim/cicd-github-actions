@@ -2,7 +2,7 @@
 
 services:
   basic-api-dotnet:
-    image: "${DOCKER_HUB_USERNAME}/larkreminderbot:latest"
+    image: "${DOCKER_HUB_USERNAME}/Basic-API-dotnet:latest"
     ports:
       - "5000:5000"
       - "80:5000"
