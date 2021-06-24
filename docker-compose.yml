@@ -1,0 +1,13 @@
+﻿version: '3.8'
+
+services:
+  basic-api-dotnet:
+    image: basic-api-dotnet:latest
+    depends_on:
+      - database
+    build: .
+    ports:
+      - "5000:5000"
+      - "80:5000"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Production"
