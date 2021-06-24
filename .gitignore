@@ -106,3 +106,33 @@ fabric.properties
 *.out
 *.app
 
+# User-specific files
+*.suo
+*.user
+*.sln.docstates
+
+#Ignore env var file
+.env
+
+#Ignore ecs-cli related files
+ecs-cli.asc
+
+#Ignore appsettings configuration files
+**/appsettings.json
+/WebApplication/appsettings.json
+**/appsettings.Development.json
+**/appsettings.Staging.json
+**/appsettings.Production.json
+**/appsettings.Test.json
+
+# Build results
+
+[Dd]ebug/
+[Rr]elease/
+x64/
+[Bb]in/
+[Oo]bj/
+
+# MSTest test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
