@@ -2,15 +2,9 @@
 
 services:
   basic-api-dotnet:
-    image: "${DOCKER_HUB_USERNAME}/Basic-API-dotnet:latest"
+    image: "${DOCKER_HUB_USERNAME}/basic-api-dotnet:latest"
     ports:
       - "5000:5000"
       - "80:5000"
     environment:
       ASPNETCORE_ENVIRONMENT: "Production"
-    logging:
-      driver: awslogs
-      options:
-        awslogs-group: basic-api-dotnet
-        awslogs-region: ap-southeast-1
-        awslogs-stream-prefix: basic-api-dotnet
