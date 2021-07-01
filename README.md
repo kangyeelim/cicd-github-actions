@@ -1,1 +1,0 @@
-# CICD Github Actions templates
